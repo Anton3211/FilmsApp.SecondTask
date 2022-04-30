@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilmCell" id="JPc-pT-WwA" customClass="FilmCollectionViewCell" customModule="FilmsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="186" height="379"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="X89-lw-5Gd">
+                <rect key="frame" x="0.0" y="0.0" width="186" height="379"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="J6d-v8-F7w">
+                        <rect key="frame" x="13" y="16" width="160" height="329"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MaH-Om-fSR">
+                                <rect key="frame" x="0.0" y="0.0" width="159" height="261.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="159" id="1Kh-4G-jtV"/>
+                                    <constraint firstAttribute="height" constant="261.5" id="NHT-ld-8qc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название фильма" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5K-8C-IW2">
+                                <rect key="frame" x="0.0" y="263.5" width="153.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Год выпуска" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yB-lc-jNk">
+                                <rect key="frame" x="0.0" y="286" width="98" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tva-Oj-ZTe">
+                                <rect key="frame" x="0.0" y="308.5" width="65" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="J6d-v8-F7w" firstAttribute="top" secondItem="X89-lw-5Gd" secondAttribute="top" constant="16" id="2cu-l9-bfD"/>
+                    <constraint firstAttribute="trailing" secondItem="J6d-v8-F7w" secondAttribute="trailing" constant="13" id="JCH-Al-2f3"/>
+                    <constraint firstItem="J6d-v8-F7w" firstAttribute="leading" secondItem="X89-lw-5Gd" secondAttribute="leading" constant="13" id="WZG-1K-iBo"/>
+                    <constraint firstAttribute="bottom" secondItem="J6d-v8-F7w" secondAttribute="bottom" constant="34" id="anN-2i-0YO"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <color key="backgroundColor" red="0.95294117649999999" green="0.65098039220000004" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="filmTitleLabel" destination="a5K-8C-IW2" id="bq4-kk-OXq"/>
+                <outlet property="posterPreviewImageView" destination="MaH-Om-fSR" id="tRf-qw-m6q"/>
+                <outlet property="ratingLabel" destination="tva-Oj-ZTe" id="PkG-QY-2YZ"/>
+                <outlet property="releaseYearLabel" destination="5yB-lc-jNk" id="sZu-cb-3lr"/>
+            </connections>
+            <point key="canvasLocation" x="-126.08695652173914" y="62.611607142857139"/>
+        </collectionViewCell>
+    </objects>
+</document>
